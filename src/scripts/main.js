@@ -5,11 +5,9 @@ const elemSpan = document.querySelectorAll('.population');
 
 elemSpan.forEach((x) => {
   total += Number(x.textContent.replaceAll(',', ''));
-
-  return total;
 });
 
-const average = parseInt(total / elemSpan.length);
+const average = (total / elemSpan.length).toFixed();
 
 function numberWithCommas(x) {
   let y = x.toString();
